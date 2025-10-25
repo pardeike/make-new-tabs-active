@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "Flyttar varje ny flik längst fram: fokuserar automatiskt, stoppar bakgrundsflikar och håller surfflödet igång."
   },
-  "versionName": {
-    "message": "Fokusera nya flikar direkt"
-  },
   "actionTitle": {
     "message": "Aktivera nya flikar: klicka för att växla"
   },

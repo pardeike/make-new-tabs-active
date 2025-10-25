@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "Bring every new tab to the front - auto-focus tabs, stop background openings, keep browsing flow uninterrupted."
   },
-  "versionName": {
-    "message": "Focus new tabs instantly"
-  },
   "actionTitle": {
     "message": "Make New Tabs Active: click to toggle"
   },

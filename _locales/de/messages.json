@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "Bringt jeden neuen Tab nach vorne: fokussiert automatisch, verhindert Hintergrundöffnungen und hält deinen Flow aufrecht."
   },
-  "versionName": {
-    "message": "Tabs sofort fokussieren"
-  },
   "actionTitle": {
     "message": "Neue Tabs aktiv: zum Umschalten klicken"
   },

@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "Met chaque nouvel onglet au premier plan : mise au point automatique, aucune ouverture en arrière-plan et navigation fluide."
   },
-  "versionName": {
-    "message": "Focalisez les onglets instantanément"
-  },
   "actionTitle": {
     "message": "Activer les nouveaux onglets : cliquer pour basculer"
   },

@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "Lleva cada pestaña nueva al frente: enfoca automáticamente, evita aperturas en segundo plano y mantiene fluido el ritmo de navegación."
   },
-  "versionName": {
-    "message": "Enfoca las pestañas al instante"
-  },
   "actionTitle": {
     "message": "Activa las pestañas nuevas: haz clic para alternar"
   },

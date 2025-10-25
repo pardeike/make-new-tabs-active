@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "Porta ogni nuova scheda in primo piano: mette a fuoco automaticamente, evita aperture in background e mantiene il flusso di navigazione."
   },
-  "versionName": {
-    "message": "Focalizza subito le schede"
-  },
   "actionTitle": {
     "message": "Attiva le nuove schede: clicca per alternare"
   },

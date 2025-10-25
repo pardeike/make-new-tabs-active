@@ -3,7 +3,7 @@
   "short_name": "__MSG_extensionShortName__",
   "description": "__MSG_extensionDescription__",
   "version": "1.0.0",
-  "version_name": "__MSG_versionName__",
+  "version_name": "1.0.0",
   "default_locale": "en",
   "manifest_version": 3,
   "icons": {
@@ -33,14 +33,14 @@
     "toggle-enabled": {
       "suggested_key": {
         "default": "Alt+Shift+F",
-        "mac": "Option+Shift+F"
+        "mac": "Alt+Shift+F"
       },
       "description": "__MSG_toggleCommandDescription__"
     },
     "snooze-5": {
       "suggested_key": {
         "default": "Alt+Shift+5",
-        "mac": "Option+Shift+5"
+        "mac": "Alt+Shift+5"
       },
       "description": "__MSG_snoozeCommandDescription__"
     }

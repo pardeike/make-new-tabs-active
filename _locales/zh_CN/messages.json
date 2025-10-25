@@ -8,9 +8,6 @@
   "extensionDescription": {
     "message": "让每个新标签页立即置于前台：自动聚焦，阻止后台打开，保持浏览节奏畅通。"
   },
-  "versionName": {
-    "message": "即时聚焦新标签"
-  },
   "actionTitle": {
     "message": "自动激活新标签页：点击切换"
   },
