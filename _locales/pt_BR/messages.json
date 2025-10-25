@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Ative novas abas"
+  },
+  "extensionShortName": {
+    "message": "AbasAtivas"
+  },
+  "extensionDescription": {
+    "message": "Traga cada nova aba para a frente: foco automático, impede aberturas em segundo plano e mantém a navegação fluindo."
+  },
+  "versionName": {
+    "message": "Foque as abas instantaneamente"
+  },
+  "actionTitle": {
+    "message": "Ative novas abas: clique para alternar"
+  },
+  "toggleCommandDescription": {
+    "message": "Ativar ou desativar Make New Tabs Active"
+  },
+  "snoozeCommandDescription": {
+    "message": "Adiar por 5 minutos"
+  }
+}

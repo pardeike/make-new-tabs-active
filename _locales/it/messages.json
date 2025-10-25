@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Attiva le nuove schede"
+  },
+  "extensionShortName": {
+    "message": "SchedeAttive"
+  },
+  "extensionDescription": {
+    "message": "Porta ogni nuova scheda in primo piano: mette a fuoco automaticamente, evita aperture in background e mantiene il flusso di navigazione."
+  },
+  "versionName": {
+    "message": "Focalizza subito le schede"
+  },
+  "actionTitle": {
+    "message": "Attiva le nuove schede: clicca per alternare"
+  },
+  "toggleCommandDescription": {
+    "message": "Attiva o disattiva Make New Tabs Active"
+  },
+  "snoozeCommandDescription": {
+    "message": "Metti in pausa per 5 minuti"
+  }
+}

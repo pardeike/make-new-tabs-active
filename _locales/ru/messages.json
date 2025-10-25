@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Новые вкладки сразу активны"
+  },
+  "extensionShortName": {
+    "message": "АктивныеВкладки"
+  },
+  "extensionDescription": {
+    "message": "Выводит каждую новую вкладку на передний план: автофокус, никакого скрытого открытия и непрерывный поток серфинга."
+  },
+  "versionName": {
+    "message": "Мгновенный фокус вкладок"
+  },
+  "actionTitle": {
+    "message": "Новые вкладки активны: нажмите, чтобы переключить"
+  },
+  "toggleCommandDescription": {
+    "message": "Включить или отключить Make New Tabs Active"
+  },
+  "snoozeCommandDescription": {
+    "message": "Пауза на 5 минут"
+  }
+}

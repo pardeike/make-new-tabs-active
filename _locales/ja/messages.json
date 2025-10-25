@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "新しいタブをすぐアクティブに"
+  },
+  "extensionShortName": {
+    "message": "タブ即アクティブ"
+  },
+  "extensionDescription": {
+    "message": "開いた新しいタブを常に最前面に表示。自動でフォーカスし、バックグラウンドで開くのを防ぎ、ブラウジングの流れを保ちます。"
+  },
+  "versionName": {
+    "message": "新規タブを即フォーカス"
+  },
+  "actionTitle": {
+    "message": "新しいタブをアクティブ化: クリックで切り替え"
+  },
+  "toggleCommandDescription": {
+    "message": "Make New Tabs Active を有効/無効にする"
+  },
+  "snoozeCommandDescription": {
+    "message": "5 分間スヌーズ"
+  }
+}
