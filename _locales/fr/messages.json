@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Activer les nouveaux onglets"
+  },
+  "extensionShortName": {
+    "message": "OngletsActifs"
+  },
+  "extensionDescription": {
+    "message": "Met chaque nouvel onglet au premier plan : mise au point automatique, aucune ouverture en arrière-plan et navigation fluide."
+  },
+  "versionName": {
+    "message": "Focalisez les onglets instantanément"
+  },
+  "actionTitle": {
+    "message": "Activer les nouveaux onglets : cliquer pour basculer"
+  },
+  "toggleCommandDescription": {
+    "message": "Activer/Désactiver Make New Tabs Active"
+  },
+  "snoozeCommandDescription": {
+    "message": "Mettre en veille 5 minutes"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Neue Tabs sofort aktiv"
+  },
+  "extensionShortName": {
+    "message": "TabsAktiv"
+  },
+  "extensionDescription": {
+    "message": "Bringt jeden neuen Tab nach vorne: fokussiert automatisch, verhindert Hintergrundöffnungen und hält deinen Flow aufrecht."
+  },
+  "versionName": {
+    "message": "Tabs sofort fokussieren"
+  },
+  "actionTitle": {
+    "message": "Neue Tabs aktiv: zum Umschalten klicken"
+  },
+  "toggleCommandDescription": {
+    "message": "Make New Tabs Active ein- oder ausschalten"
+  },
+  "snoozeCommandDescription": {
+    "message": "Für 5 Minuten pausieren"
+  }
+}

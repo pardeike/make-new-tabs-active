@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Aktivera nya flikar"
+  },
+  "extensionShortName": {
+    "message": "AktivaFlikar"
+  },
+  "extensionDescription": {
+    "message": "Flyttar varje ny flik längst fram: fokuserar automatiskt, stoppar bakgrundsflikar och håller surfflödet igång."
+  },
+  "versionName": {
+    "message": "Fokusera nya flikar direkt"
+  },
+  "actionTitle": {
+    "message": "Aktivera nya flikar: klicka för att växla"
+  },
+  "toggleCommandDescription": {
+    "message": "Aktivera eller inaktivera Make New Tabs Active"
+  },
+  "snoozeCommandDescription": {
+    "message": "Pausa i 5 minuter"
+  }
+}

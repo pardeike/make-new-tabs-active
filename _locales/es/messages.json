@@ -1,0 +1,23 @@
+{
+  "extensionName": {
+    "message": "Activa las pestañas nuevas"
+  },
+  "extensionShortName": {
+    "message": "PestañasActivas"
+  },
+  "extensionDescription": {
+    "message": "Lleva cada pestaña nueva al frente: enfoca automáticamente, evita aperturas en segundo plano y mantiene fluido el ritmo de navegación."
+  },
+  "versionName": {
+    "message": "Enfoca las pestañas al instante"
+  },
+  "actionTitle": {
+    "message": "Activa las pestañas nuevas: haz clic para alternar"
+  },
+  "toggleCommandDescription": {
+    "message": "Activa o desactiva Make New Tabs Active"
+  },
+  "snoozeCommandDescription": {
+    "message": "Pausar durante 5 minutos"
+  }
+}

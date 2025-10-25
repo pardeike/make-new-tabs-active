@@ -1,10 +1,17 @@
 {
-  "name": "Make New Tabs Active",
-  "short_name": "MakeNewTabsActive",
-  "description": "Bring every new tab to the front - auto-focus tabs, stop background openings, keep browsing flow uninterrupted.",
+  "name": "__MSG_extensionName__",
+  "short_name": "__MSG_extensionShortName__",
+  "description": "__MSG_extensionDescription__",
   "version": "1.0.0",
-  "version_name": "Focus new tabs instantly",
+  "version_name": "__MSG_versionName__",
+  "default_locale": "en",
   "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "incognito": "split",
   "permissions": [
     "tabs",
@@ -15,8 +22,12 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Make New Tabs Active: click to toggle",
-    "default_popup": "popup.html"
+    "default_title": "__MSG_actionTitle__",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png"
+    }
   },
   "commands": {
     "toggle-enabled": {
@@ -24,14 +35,14 @@
         "default": "Alt+Shift+F",
         "mac": "Option+Shift+F"
       },
-      "description": "Toggle Make New Tabs Active on/off"
+      "description": "__MSG_toggleCommandDescription__"
     },
     "snooze-5": {
       "suggested_key": {
         "default": "Alt+Shift+5",
         "mac": "Option+Shift+5"
       },
-      "description": "Snooze for 5 minutes"
+      "description": "__MSG_snoozeCommandDescription__"
     }
   }
 }
