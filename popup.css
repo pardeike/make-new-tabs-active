@@ -42,16 +42,16 @@ button:focus-visible {
 }
 
 .snooze .controls {
-  display: grid;
-  gap: 0.35rem;
-  grid-template-columns: 1fr 1fr 2fr;
+  display: flex;
   align-items: center;
+  gap: 0.25rem;
 }
 
 .snooze input {
+  flex: 1 1 auto;
+  min-width: 0;
   padding: 0.5rem;
   font-size: 0.95rem;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -60,11 +60,17 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+
 .snooze #snooze {
+  flex: 0 0 50%;
+  width: auto;
   margin: 0;
 }
 
 .snooze #snooze-min-label {
+  flex: 0 0 auto;
+  padding: 0 0.15rem;
   text-align: center;
-  font-size: 0.9rem;
+  white-space: nowrap;
+  font-size: 0.85rem;
 }
