@@ -1,8 +1,8 @@
 // Make New Tabs Active
 // Bring new tabs to the front, with toggle + snooze
 
-// Note: In MV3, incognito context is determined per-window, not per-service-worker.
-// We use "normal" scope for the service worker and handle incognito state via window queries.
+// Note: in MV3, incognito context is determined per-window, not per-service-worker,
+// we use "normal" scope for the service worker and handle incognito state via window queries
 const SCOPE = "normal";
 const ENABLED_KEY = `enabled_${SCOPE}`;
 const SNOOZE_KEY = `snoozeUntil_${SCOPE}`;
@@ -14,8 +14,7 @@ const STARTUP_GUARD_MS = 10_000;
 const DEFAULTS = { [ENABLED_KEY]: true, [SNOOZE_KEY]: 0, [SNOOZE_MINUTES_KEY]: 5 };
 const sessionStore = chrome.storage && chrome.storage.session;
 
-// Guard against Chrome's session-restore tabs from being pulled to the front.
-
+// guard against Chrome's session-restore tabs from being pulled to the front
 let startupGuardUntil = 0;
 let startupGuardLoaded = false;
 
