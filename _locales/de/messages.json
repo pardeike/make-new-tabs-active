@@ -15,6 +15,41 @@
     "message": "Make New Tabs Active ein- oder ausschalten"
   },
   "snoozeCommandDescription": {
-    "message": "Für 5 Minuten pausieren"
+    "message": "Für gespeicherte Minuten pausieren"
+  },
+  "snoozeButtonLabel": {
+    "message": "Snooze"
+  },
+  "snoozeMinutesSuffix": {
+    "message": "Min"
+  },
+  "snoozeMinutesInputLabel": {
+    "message": "Minuten für Snooze"
+  },
+  "statusDisabled": {
+    "message": "Deaktiviert"
+  },
+  "statusEnabled": {
+    "message": "Aktiviert"
+  },
+  "statusSnoozedUntil": {
+    "message": "Pausiert bis $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "toggleStopSnooze": {
+    "message": "Snooze beenden"
+  },
+  "toggleDisable": {
+    "message": "Deaktivieren"
+  },
+  "toggleEnable": {
+    "message": "Aktivieren"
+  },
+  "snoozeSectionHeading": {
+    "message": "Snooze"
   }
 }

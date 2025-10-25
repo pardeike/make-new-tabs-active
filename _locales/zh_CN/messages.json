@@ -15,6 +15,41 @@
     "message": "启用或停用 Make New Tabs Active"
   },
   "snoozeCommandDescription": {
-    "message": "暂停 5 分钟"
+    "message": "按已保存的分钟数暂停"
+  },
+  "snoozeButtonLabel": {
+    "message": "延迟"
+  },
+  "snoozeMinutesSuffix": {
+    "message": "分钟"
+  },
+  "snoozeMinutesInputLabel": {
+    "message": "延迟的分钟数"
+  },
+  "statusDisabled": {
+    "message": "已停用"
+  },
+  "statusEnabled": {
+    "message": "已启用"
+  },
+  "statusSnoozedUntil": {
+    "message": "已延迟至 $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "toggleStopSnooze": {
+    "message": "停止延迟"
+  },
+  "toggleDisable": {
+    "message": "停用"
+  },
+  "toggleEnable": {
+    "message": "启用"
+  },
+  "snoozeSectionHeading": {
+    "message": "延迟"
   }
 }

@@ -15,6 +15,41 @@
     "message": "Activer/Désactiver Make New Tabs Active"
   },
   "snoozeCommandDescription": {
-    "message": "Mettre en veille 5 minutes"
+    "message": "Mettre en veille pendant les minutes enregistrées"
+  },
+  "snoozeButtonLabel": {
+    "message": "Reporter"
+  },
+  "snoozeMinutesSuffix": {
+    "message": "min"
+  },
+  "snoozeMinutesInputLabel": {
+    "message": "Minutes de report"
+  },
+  "statusDisabled": {
+    "message": "Désactivé"
+  },
+  "statusEnabled": {
+    "message": "Activé"
+  },
+  "statusSnoozedUntil": {
+    "message": "Reporté jusqu’à $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "toggleStopSnooze": {
+    "message": "Arrêter le report"
+  },
+  "toggleDisable": {
+    "message": "Désactiver"
+  },
+  "toggleEnable": {
+    "message": "Activer"
+  },
+  "snoozeSectionHeading": {
+    "message": "Reporter"
   }
 }

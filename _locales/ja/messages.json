@@ -15,6 +15,41 @@
     "message": "Make New Tabs Active を有効/無効にする"
   },
   "snoozeCommandDescription": {
-    "message": "5 分間スヌーズ"
+    "message": "保存された分数だけスヌーズする"
+  },
+  "snoozeButtonLabel": {
+    "message": "スヌーズ"
+  },
+  "snoozeMinutesSuffix": {
+    "message": "分"
+  },
+  "snoozeMinutesInputLabel": {
+    "message": "スヌーズする分数"
+  },
+  "statusDisabled": {
+    "message": "無効"
+  },
+  "statusEnabled": {
+    "message": "有効"
+  },
+  "statusSnoozedUntil": {
+    "message": "$time$ までスヌーズ中",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "toggleStopSnooze": {
+    "message": "スヌーズを停止"
+  },
+  "toggleDisable": {
+    "message": "無効にする"
+  },
+  "toggleEnable": {
+    "message": "有効にする"
+  },
+  "snoozeSectionHeading": {
+    "message": "スヌーズ"
   }
 }

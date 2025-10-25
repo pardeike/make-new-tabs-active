@@ -15,6 +15,41 @@
     "message": "Включить или отключить Make New Tabs Active"
   },
   "snoozeCommandDescription": {
-    "message": "Пауза на 5 минут"
+    "message": "Пауза на сохранённые минуты"
+  },
+  "snoozeButtonLabel": {
+    "message": "Отложить"
+  },
+  "snoozeMinutesSuffix": {
+    "message": "мин"
+  },
+  "snoozeMinutesInputLabel": {
+    "message": "Минут для отложенного режима"
+  },
+  "statusDisabled": {
+    "message": "Отключено"
+  },
+  "statusEnabled": {
+    "message": "Включено"
+  },
+  "statusSnoozedUntil": {
+    "message": "Отложено до $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "toggleStopSnooze": {
+    "message": "Прекратить отложение"
+  },
+  "toggleDisable": {
+    "message": "Отключить"
+  },
+  "toggleEnable": {
+    "message": "Включить"
+  },
+  "snoozeSectionHeading": {
+    "message": "Отложить"
   }
 }

@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Make New Tabs Active</title>
+  <title>__MSG_extensionName__</title>
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
   <main>
-    <h1>Make New Tabs Active</h1>
+    <h1>__MSG_extensionName__</h1>
     <p id="status"></p>
     <button id="toggle"></button>
     <section class="snooze">
-      <h2>Snooze</h2>
-      <div class="buttons">
-        <button data-minutes="5">5 minutes</button>
-        <button data-minutes="15">15 minutes</button>
+      <h2>__MSG_snoozeSectionHeading__</h2>
+      <div class="controls">
+        <input id="snooze-minutes" type="text" inputmode="numeric" autocomplete="off" />
+        <span id="snooze-min-label"></span>
+        <button id="snooze"></button>
       </div>
     </section>
   </main>

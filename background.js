@@ -4,11 +4,12 @@
 const SCOPE = chrome.extension.inIncognitoContext ? "incog" : "normal";
 const ENABLED_KEY = `enabled_${SCOPE}`;
 const SNOOZE_KEY = `snoozeUntil_${SCOPE}`;
+const SNOOZE_MINUTES_KEY = `snoozeMinutes_${SCOPE}`;
 const STARTUP_GUARD_KEY = `startupGuardUntil_${SCOPE}`;
 const ALARM = `snooze-expire-${SCOPE}`;
 const STARTUP_GUARD_MS = 10_000;
 
-const DEFAULTS = { [ENABLED_KEY]: true, [SNOOZE_KEY]: 0 };
+const DEFAULTS = { [ENABLED_KEY]: true, [SNOOZE_KEY]: 0, [SNOOZE_MINUTES_KEY]: 5 };
 const sessionStore = chrome.storage && chrome.storage.session;
 
 // Guard against Chrome's session-restore tabs from being pulled to the front.
@@ -23,15 +24,30 @@ loadStartupGuard().catch(() => {
 
 async function getState() {
 	const got = await chrome.storage.local.get(DEFAULTS);
-	return { enabled: !!got[ENABLED_KEY], snoozeUntil: got[SNOOZE_KEY] || 0 };
+	return {
+		enabled: !!got[ENABLED_KEY],
+		snoozeUntil: got[SNOOZE_KEY] || 0,
+		snoozeMinutes: toValidMinutes(got[SNOOZE_MINUTES_KEY]) || DEFAULTS[SNOOZE_MINUTES_KEY],
+	};
 }
 
 async function setState(patch) {
 	const set = {};
 	if (patch.enabled !== undefined) set[ENABLED_KEY] = !!patch.enabled;
 	if (patch.snoozeUntil !== undefined) set[SNOOZE_KEY] = patch.snoozeUntil || 0;
+	if (patch.snoozeMinutes !== undefined) {
+		const minutes = toValidMinutes(patch.snoozeMinutes);
+		if (minutes) set[SNOOZE_MINUTES_KEY] = minutes;
+	}
+	if (!Object.keys(set).length) return;
 	await chrome.storage.local.set(set);
 	await updateBadge();
+}
+
+function toValidMinutes(value) {
+	const minutes = Number.parseInt(value, 10);
+	if (!Number.isFinite(minutes) || minutes <= 0) return null;
+	return minutes;
 }
 
 function isActive({ enabled, snoozeUntil }) {
@@ -42,15 +58,16 @@ async function updateBadge() {
 	const { enabled, snoozeUntil } = await getState();
 	const now = Date.now();
 	if (!enabled) {
-		chrome.action.setTitle({ title: "Disabled" });
+		chrome.action.setTitle({ title: chrome.i18n.getMessage("statusDisabled") || "Disabled" });
 		chrome.action.setIcon({ path: "disabled.png" });
 	} else if (snoozeUntil > now) {
 		const until = new Date(snoozeUntil);
 		const time = until.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-		chrome.action.setTitle({ title: `Snoozed until ${time}` });
+		const snoozedTitle = chrome.i18n.getMessage("statusSnoozedUntil", time) || `Snoozed until ${time}`;
+		chrome.action.setTitle({ title: snoozedTitle });
 		chrome.action.setIcon({ path: "snoozed.png" });
 	} else {
-		chrome.action.setTitle({ title: "Enabled" });
+		chrome.action.setTitle({ title: chrome.i18n.getMessage("statusEnabled") || "Enabled" });
 		chrome.action.setIcon({ path: "icon.png" });
 	}
 }
@@ -62,7 +79,8 @@ async function toggle() {
 }
 
 async function snooze(minutes) {
-	const until = Date.now() + minutes * 60 * 1000;
+	const appliedMinutes = toValidMinutes(minutes) || (await getState()).snoozeMinutes;
+	const until = Date.now() + appliedMinutes * 60 * 1000;
 	await setState({ enabled: true, snoozeUntil: until });
 	chrome.alarms.create(ALARM, { when: until });
 }
@@ -94,9 +112,15 @@ chrome.runtime.onStartup.addListener(async () => {
 
 chrome.action.onClicked.addListener(() => toggle());
 
-chrome.commands.onCommand.addListener((cmd) => {
-	if (cmd === "toggle-enabled") toggle();
-	if (cmd === "snooze-5") snooze(5);
+chrome.commands.onCommand.addListener(async (cmd) => {
+	if (cmd === "toggle-enabled") {
+		await toggle();
+		return;
+	}
+	if (cmd === "snooze") {
+		const { snoozeMinutes } = await getState();
+		await snooze(snoozeMinutes);
+	}
 });
 
 chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
@@ -108,14 +132,25 @@ chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
 		return true;
 	}
 	if (request.type === "snooze") {
-		const minutes = Number(request.minutes);
-		if (!Number.isFinite(minutes) || minutes <= 0) {
+		const minutes = toValidMinutes(request.minutes);
+		if (!minutes) {
 			sendResponse({ ok: false, error: "invalid minutes" });
 			return;
 		}
 		snooze(minutes)
 			.then(() => sendResponse({ ok: true }))
 			.catch((error) => sendResponse({ ok: false, error: error?.message || "snooze failed" }));
+		return true;
+	}
+	if (request.type === "setSnoozeMinutes") {
+		const minutes = toValidMinutes(request.minutes);
+		if (!minutes) {
+			sendResponse({ ok: false, error: "invalid minutes" });
+			return;
+		}
+		setState({ snoozeMinutes: minutes })
+			.then(() => sendResponse({ ok: true }))
+			.catch((error) => sendResponse({ ok: false, error: error?.message || "save failed" }));
 		return true;
 	}
 	if (request.type === "unsnooze") {

@@ -15,6 +15,41 @@
     "message": "Toggle Make New Tabs Active on/off"
   },
   "snoozeCommandDescription": {
-    "message": "Snooze for 5 minutes"
+    "message": "Snooze for saved minutes"
+  },
+  "snoozeButtonLabel": {
+    "message": "Snooze"
+  },
+  "snoozeMinutesSuffix": {
+    "message": "min"
+  },
+  "snoozeMinutesInputLabel": {
+    "message": "Minutes to snooze"
+  },
+  "statusDisabled": {
+    "message": "Disabled"
+  },
+  "statusEnabled": {
+    "message": "Enabled"
+  },
+  "statusSnoozedUntil": {
+    "message": "Snoozed until $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "toggleStopSnooze": {
+    "message": "Stop Snooze"
+  },
+  "toggleDisable": {
+    "message": "Disable"
+  },
+  "toggleEnable": {
+    "message": "Enable"
+  },
+  "snoozeSectionHeading": {
+    "message": "Snooze"
   }
 }
