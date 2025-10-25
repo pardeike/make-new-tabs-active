@@ -46,7 +46,10 @@ function render(state) {
     statusEl.textContent = "Enabled";
   }
 
-  toggleButton.textContent = state.enabled ? "Disable" : "Enable";
+  if (state.snoozeUntil > now)
+    toggleButton.textContent = "Stop Snooze";
+  else
+    toggleButton.textContent = state.enabled ? "Disable" : "Enable";
 }
 
 async function loadState() {

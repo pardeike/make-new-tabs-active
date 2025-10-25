@@ -42,7 +42,9 @@ async function updateBadge() {
 	const { enabled, snoozeUntil } = await getState();
 	const now = Date.now();
 	const text = !enabled ? "OFF" : snoozeUntil > now ? "Zz" : "ON";
-	await chrome.action.setBadgeText({ text });
+	await chrome.action.setBadgeText({ text: "" });
+	const icon = enabled && snoozeUntil <= now ? "icon.png" : "disabled.png";
+	await chrome.action.setIcon({ path: icon });
 	await chrome.action.setTitle({
 		title:
 			text === "ON"
@@ -133,7 +135,7 @@ async function armStartupGuard() {
 	startupGuardUntil = until;
 	startupGuardLoaded = true;
 	if (!sessionStore) return;
-	await storageSessionSet({ [STARTUP_GUARD_KEY]: until }).catch(() => {});
+	await storageSessionSet({ [STARTUP_GUARD_KEY]: until }).catch(() => { });
 }
 
 async function loadStartupGuard() {
@@ -155,7 +157,7 @@ function isStartupGuardActive() {
 	if (!startupGuardUntil) return false;
 	if (Date.now() >= startupGuardUntil) {
 		startupGuardUntil = 0;
-		if (sessionStore) sessionStore.remove(STARTUP_GUARD_KEY, () => {});
+		if (sessionStore) sessionStore.remove(STARTUP_GUARD_KEY, () => { });
 		return false;
 	}
 	return true;
