@@ -6,13 +6,17 @@ const DEFAULTS = { [ENABLED_KEY]: true, [SNOOZE_KEY]: 0 };
 const statusEl = document.getElementById("status");
 const toggleButton = document.getElementById("toggle");
 const snoozeButtons = Array.from(document.querySelectorAll("[data-minutes]"));
+let currentState = null;
 
 init();
 
 async function init() {
   await refresh();
   toggleButton.addEventListener("click", async () => {
-    await withButtonLock(toggleButton, () => sendMessage({ type: "toggle" }));
+    await withButtonLock(toggleButton, () => {
+      if (isSnoozed(currentState)) return sendMessage({ type: "unsnooze" });
+      return sendMessage({ type: "toggle" });
+    });
   });
   snoozeButtons.forEach((button) => {
     button.addEventListener("click", async () => {
@@ -31,6 +35,7 @@ async function init() {
 
 async function refresh() {
   const state = await loadState();
+  currentState = state;
   render(state);
 }
 
@@ -50,6 +55,11 @@ function render(state) {
     toggleButton.textContent = "Stop Snooze";
   else
     toggleButton.textContent = state.enabled ? "Disable" : "Enable";
+}
+
+function isSnoozed(state) {
+  if (!state) return false;
+  return state.enabled && state.snoozeUntil > Date.now();
 }
 
 async function loadState() {

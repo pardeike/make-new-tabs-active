@@ -41,18 +41,18 @@ function isActive({ enabled, snoozeUntil }) {
 async function updateBadge() {
 	const { enabled, snoozeUntil } = await getState();
 	const now = Date.now();
-	const text = !enabled ? "OFF" : snoozeUntil > now ? "Zz" : "ON";
-	await chrome.action.setBadgeText({ text: "" });
-	const icon = enabled && snoozeUntil <= now ? "icon.png" : "disabled.png";
-	await chrome.action.setIcon({ path: icon });
-	await chrome.action.setTitle({
-		title:
-			text === "ON"
-				? "Make New Tabs Active: enabled. Click to disable."
-				: text === "Zz"
-					? "Make New Tabs Active: snoozed. Click to disable."
-					: "Make New Tabs Active: disabled. Click to enable."
-	});
+	if (!enabled) {
+		chrome.action.setTitle({ title: "Disabled" });
+		chrome.action.setIcon({ path: "disabled.png" });
+	} else if (snoozeUntil > now) {
+		const until = new Date(snoozeUntil);
+		const time = until.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+		chrome.action.setTitle({ title: `Snoozed until ${time}` });
+		chrome.action.setIcon({ path: "snoozed.png" });
+	} else {
+		chrome.action.setTitle({ title: "Enabled" });
+		chrome.action.setIcon({ path: "icon.png" });
+	}
 }
 
 async function toggle() {
@@ -65,6 +65,11 @@ async function snooze(minutes) {
 	const until = Date.now() + minutes * 60 * 1000;
 	await setState({ enabled: true, snoozeUntil: until });
 	chrome.alarms.create(ALARM, { when: until });
+}
+
+async function unsnooze() {
+	await setState({ enabled: true, snoozeUntil: 0 });
+	chrome.alarms.clear(ALARM);
 }
 
 function bringToFront(tab) {
@@ -111,6 +116,12 @@ chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
 		snooze(minutes)
 			.then(() => sendResponse({ ok: true }))
 			.catch((error) => sendResponse({ ok: false, error: error?.message || "snooze failed" }));
+		return true;
+	}
+	if (request.type === "unsnooze") {
+		unsnooze()
+			.then(() => sendResponse({ ok: true }))
+			.catch((error) => sendResponse({ ok: false, error: error?.message || "unsnooze failed" }));
 		return true;
 	}
 });
