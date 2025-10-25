@@ -22,9 +22,16 @@ ARCHIVE_PATH="$SCRIPT_DIR/$ARCHIVE_NAME"
 
 cd "$PARENT_DIR"
 
-js_files=()
+files=("$ARCHIVE_DIR_NAME/manifest.json")
 while IFS= read -r -d '' file; do
-  js_files+=("$file")
-done < <(find "$ARCHIVE_DIR_NAME" -type f -name '*.js' -print0)
+  files+=("$file")
+done < <(find "$ARCHIVE_DIR_NAME" -type f \
+  \( -name '*.js' -o -name '*.html' -o -name '*.css' -o -iname 'icon*.png' -o -path "${ARCHIVE_DIR_NAME}/_locales/*" \) \
+  -print0)
 
-zip -q -FS "$ARCHIVE_PATH" "$ARCHIVE_DIR_NAME/manifest.json" "${js_files[@]}"
+if [[ ${#files[@]} -eq 0 ]]; then
+  echo "No files found to package" >&2
+  exit 1
+fi
+
+zip -q -FS "$ARCHIVE_PATH" "${files[@]}"
