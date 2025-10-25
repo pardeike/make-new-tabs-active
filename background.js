@@ -54,6 +54,10 @@ function isActive({ enabled, snoozeUntil }) {
 	return enabled && Date.now() >= (snoozeUntil || 0);
 }
 
+function isSnoozed({ enabled, snoozeUntil }) {
+	return enabled && Date.now() < (snoozeUntil || 0);
+}
+
 async function updateBadge() {
 	const { enabled, snoozeUntil } = await getState();
 	const now = Date.now();
@@ -73,9 +77,14 @@ async function updateBadge() {
 }
 
 async function toggle() {
-	const { enabled } = await getState();
-	await setState({ enabled: !enabled, snoozeUntil: 0 });
-	if (!enabled) chrome.alarms.clear(ALARM);
+	const state = await getState();
+	if (isSnoozed(state)) {
+		await unsnooze();
+		return;
+	}
+	const nextEnabled = !state.enabled;
+	await setState({ enabled: nextEnabled, snoozeUntil: 0 });
+	chrome.alarms.clear(ALARM);
 }
 
 async function snooze(minutes) {
