@@ -1,7 +1,9 @@
 // Make New Tabs Active
 // Bring new tabs to the front, with toggle + snooze
 
-const SCOPE = chrome.extension.inIncognitoContext ? "incog" : "normal";
+// Note: In MV3, incognito context is determined per-window, not per-service-worker.
+// We use "normal" scope for the service worker and handle incognito state via window queries.
+const SCOPE = "normal";
 const ENABLED_KEY = `enabled_${SCOPE}`;
 const SNOOZE_KEY = `snoozeUntil_${SCOPE}`;
 const SNOOZE_MINUTES_KEY = `snoozeMinutes_${SCOPE}`;
@@ -46,7 +48,7 @@ async function setState(patch) {
 
 function toValidMinutes(value) {
 	const minutes = Number.parseInt(value, 10);
-	if (!Number.isFinite(minutes) || minutes <= 0) return null;
+	if (!Number.isFinite(minutes) || minutes <= 0 || minutes > 1440) return null; // Max 24 hours
 	return minutes;
 }
 
@@ -103,9 +105,15 @@ function bringToFront(tab) {
 	if (!tab || tab.id === undefined) return;
 	// small delay avoids races at creation time
 	setTimeout(() => {
-		chrome.tabs.update(tab.id, { active: true });
+		chrome.tabs.update(tab.id, { active: true }).catch(() => {
+			// Tab may have been closed, ignore the error
+		});
 		// focus the containing window when possible
-		if (tab.windowId !== undefined) chrome.windows.update(tab.windowId, { focused: true });
+		if (tab.windowId !== undefined) {
+			chrome.windows.update(tab.windowId, { focused: true }).catch(() => {
+				// Window may have been closed, ignore the error
+			});
+		}
 	}, 0);
 }
 
@@ -212,7 +220,11 @@ function isStartupGuardActive() {
 	if (!startupGuardUntil) return false;
 	if (Date.now() >= startupGuardUntil) {
 		startupGuardUntil = 0;
-		if (sessionStore) sessionStore.remove(STARTUP_GUARD_KEY, () => { });
+		if (sessionStore) {
+			sessionStore.remove(STARTUP_GUARD_KEY).catch(() => {
+				// Ignore errors when removing startup guard
+			});
+		}
 		return false;
 	}
 	return true;
