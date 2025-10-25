@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="extensionName">Make New Tabs Active</title>
   <link rel="stylesheet" href="popup.css" />
 </head>
@@ -9,13 +10,13 @@
   <main>
     <h1 data-i18n="extensionName">Make New Tabs Active</h1>
     <p id="status"></p>
-    <button id="toggle"></button>
+    <button id="toggle" type="button"></button>
     <section class="snooze">
       <h2 data-i18n="snoozeSectionHeading">Snooze</h2>
       <div class="controls">
-        <input id="snooze-minutes" type="text" inputmode="numeric" autocomplete="off" />
+        <input id="snooze-minutes" type="number" min="1" max="1440" inputmode="numeric" autocomplete="off" />
         <span id="snooze-min-label"></span>
-        <button id="snooze"></button>
+        <button id="snooze" type="button"></button>
       </div>
     </section>
   </main>

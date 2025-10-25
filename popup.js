@@ -1,4 +1,4 @@
-const SCOPE = chrome.extension.inIncognitoContext ? "incog" : "normal";
+const SCOPE = "normal";
 const ENABLED_KEY = `enabled_${SCOPE}`;
 const SNOOZE_KEY = `snoozeUntil_${SCOPE}`;
 const SNOOZE_MINUTES_KEY = `snoozeMinutes_${SCOPE}`;
@@ -140,7 +140,7 @@ async function commitMinutesInput() {
     return;
   }
   const minutes = toValidMinutes(raw);
-  if (!minutes) {
+  if (!minutes || minutes > 1440) { // Max 24 hours
     snoozeMinutesInput.value = String(lastValidMinutes);
     return;
   }
@@ -162,7 +162,7 @@ async function commitMinutesInput() {
 
 function toValidMinutes(value) {
   const minutes = Number.parseInt(value, 10);
-  if (!Number.isFinite(minutes) || minutes <= 0) return null;
+  if (!Number.isFinite(minutes) || minutes <= 0 || minutes > 1440) return null; // Max 24 hours
   return minutes;
 }
 
