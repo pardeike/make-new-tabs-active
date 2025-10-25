@@ -8,14 +8,14 @@
 	"permissions": [
 		"tabs",
 		"storage",
-		"contextMenus",
 		"alarms"
 	],
 	"background": {
 		"service_worker": "background.js"
 	},
 	"action": {
-		"default_title": "Make New Tabs Active: click to toggle"
+		"default_title": "Make New Tabs Active: click to toggle",
+		"default_popup": "popup.html"
 	},
 	"commands": {
 		"toggle-enabled": {

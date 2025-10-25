@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 12px;
+  min-width: 220px;
+}
+
+h1 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.snooze h2 {
+  font-size: 0.9rem;
+  margin: 0 0 0.35rem;
+}
+
+.snooze .buttons {
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.snooze button {
+  margin: 0;
+}
