@@ -221,7 +221,7 @@ function isStartupGuardActive() {
 	if (Date.now() >= startupGuardUntil) {
 		startupGuardUntil = 0;
 		if (sessionStore) {
-			sessionStore.remove(STARTUP_GUARD_KEY).catch(() => {
+			storageSessionRemove(STARTUP_GUARD_KEY).catch(() => {
 				// Ignore errors when removing startup guard
 			});
 		}
@@ -253,6 +253,22 @@ function storageSessionSet(values) {
 			return;
 		}
 		sessionStore.set(values, () => {
+			if (chrome.runtime.lastError) {
+				reject(chrome.runtime.lastError);
+				return;
+			}
+			resolve();
+		});
+	});
+}
+
+function storageSessionRemove(key) {
+	return new Promise((resolve, reject) => {
+		if (!sessionStore) {
+			resolve();
+			return;
+		}
+		sessionStore.remove(key, () => {
 			if (chrome.runtime.lastError) {
 				reject(chrome.runtime.lastError);
 				return;
