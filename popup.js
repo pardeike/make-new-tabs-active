@@ -21,6 +21,7 @@ const toggleEnableText = chrome.i18n.getMessage("toggleEnable") || "Enable";
 init();
 
 async function init() {
+  localizeStaticText();
   await refresh();
 
   const snoozeLabel = chrome.i18n.getMessage("snoozeButtonLabel") || "Snooze";
@@ -54,6 +55,16 @@ async function init() {
     if (areaName !== "local") return;
     if (!(changes[ENABLED_KEY] || changes[SNOOZE_KEY] || changes[SNOOZE_MINUTES_KEY])) return;
     await refresh();
+  });
+}
+
+function localizeStaticText() {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    if (!key) return;
+    const message = chrome.i18n.getMessage(key);
+    if (!message) return;
+    element.textContent = message;
   });
 }
 
