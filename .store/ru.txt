@@ -1,0 +1,21 @@
+Chrome otkryvaet novye vkladki v fone po umolchaniyu. Make New Tabs Active srazu perenosit fokus na kazhduyu novuyu vkladku, v tom chisle otkrytuyu ssylkami, zakladkami ili drugimi rasshireniyami.
+
+Goryachie klavishi
+- Alt+Shift+M vklyuchaet ili otklyuchaet rasshirenie, chtoby novye vkladki srazu okazivalis vperedi ili ostavalis v fone
+- Alt+Shift+S stavit v snooze bez otkrytiya popapa
+
+Vozmozhnosti
+- srazu fokusiruet kazhduyu novuyu vkladku
+- rabotaet dlya ssylok, zakladok i vkladok ot rasshireniy
+- peremikaetsya s paneli instrumentov ili s klaviatury
+- snooze na ukazannoe chislo minut
+- otdelnie sostoyaniya dlya obychnyh i rezhima inkognito (esli vklyuchen)
+- legkovesnoe reshenie bez nastroek
+
+Bezopasnost
+- bez reklam, analitiki i trekinnga
+- bez host-permission i dostupov k seti
+- otkrytyy kod na GitHub po licenzii MIT
+
+Open source
+Kod i instrukcii po sborke: https://github.com/pardeike/make-new-tabs-active

@@ -1,0 +1,21 @@
+Chrome opens new tabs in the background by default. Make New Tabs Active brings every new tab to the front immediately, including tabs opened by links, bookmarks, or other extensions.
+
+Keyboard shortcuts
+- Alt+Shift+M toggles the extension so future tabs open in front when on or stay in the background when off
+- Alt+Shift+S snoozes without opening the popup
+
+Features
+- focuses each new tab right away
+- works with links, bookmarks, and extension opened tabs
+- toggle from the toolbar button or the keyboard shortcuts
+- snooze for the number of minutes you choose
+- separate states for normal and incognito windows (when incognito is enabled)
+- lightweight, zero configuration
+
+Safety
+- no ads, analytics, or tracking
+- no host permissions or network access
+- open source on GitHub under the MIT License
+
+Open source
+Code and build instructions: https://github.com/pardeike/make-new-tabs-active

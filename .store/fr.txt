@@ -1,0 +1,21 @@
+Par defaut, Chrome ouvre les nouveaux onglets en arriere-plan. Make New Tabs Active bascule immediatement sur chaque nouvel onglet, y compris ceux ouverts depuis un lien, un favori ou une autre extension.
+
+Raccourcis clavier
+- Alt+Shift+M active ou desactive l extension pour que les nouveaux onglets arrivent devant ou restent en arriere-plan
+- Alt+Shift+S met en pause sans ouvrir le popup
+
+Fonctionnalites
+- met instantanement le focus sur chaque nouvel onglet
+- fonctionne avec les liens, les favoris et les onglets ouverts par des extensions
+- bascule depuis l icone de la barre d outils ou via les raccourcis clavier
+- snooze pendant le nombre de minutes que vous choisissez
+- etats separes pour les fenetres normales et en navigation privee (si elle est activee)
+- leger, aucune configuration necessaire
+
+Securite
+- pas de publicite, pas d analytics, pas de suivi
+- aucune permission d hote ni acces reseau
+- open source sur GitHub sous licence MIT
+
+Open source
+Code et instructions de build : https://github.com/pardeike/make-new-tabs-active
