@@ -1,21 +1,21 @@
-Chrome opens new tabs in the background by default. Make New Tabs Active brings each new tab to the front immediately, even those opened by links, bookmarks, or other extensions.
+Chrome 默认会在后台打开新标签。Make New Tabs Active 会立即将每个新标签切换到前台，包括由链接、书签或其他扩展打开的标签页。
 
-Keyboard shortcuts
-- Alt+Shift+M toggles the extension so future tabs open in front when on (or stay in the background when off)
-- Alt+Shift+S snoozes for a moment without opening the popup
+键盘快捷键
+- Alt+Shift+M 切换扩展启用状态：开启时让后续标签立即置顶，关闭时保持在后台
+- Alt+Shift+S 无需打开弹窗即可暂时暂停
 
-Features
-- instantly focuses every new tab
-- works with links, bookmarks, and tabs opened by extensions
-- control it from the toolbar button or the shortcuts
-- snooze for the number of minutes you choose
-- separate states for normal and incognito windows (if incognito is enabled)
-- lightweight, zero configuration
+功能
+- 立即聚焦每一个新标签页
+- 适用于链接、书签和扩展打开的标签
+- 可通过工具栏按钮或快捷键切换
+- 支持按自定义分钟数延后（snooze）
+- 普通窗口与隐身窗口（启用隐身时）各自保持独立状态
+- 轻量、零配置
 
-Safety
-- no ads, analytics, or tracking
-- no host permissions or network access
-- open source on GitHub under the MIT License
+安全性
+- 无广告、无分析、无跟踪
+- 无主机权限或网络访问
+- 在 GitHub 以 MIT 许可证开源
 
-Open source
-Code and build instructions: https://github.com/pardeike/make-new-tabs-active
+开源
+源码与构建说明：https://github.com/pardeike/make-new-tabs-active
