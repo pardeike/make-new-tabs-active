@@ -1,21 +1,21 @@
-Chrome otkryvaet novye vkladki v fone po umolchaniyu. Make New Tabs Active srazu perenosit fokus na kazhduyu novuyu vkladku, v tom chisle otkrytuyu ssylkami, zakladkami ili drugimi rasshireniyami.
+По умолчанию Chrome открывает новые вкладки в фоновом режиме. Make New Tabs Active сразу переключает фокус на каждую новую вкладку, включая вкладки, открытые ссылками, закладками или расширениями.
 
-Goryachie klavishi
-- Alt+Shift+M vklyuchaet ili otklyuchaet rasshirenie, chtoby novye vkladki srazu okazivalis vperedi ili ostavalis v fone
-- Alt+Shift+S stavit v snooze bez otkrytiya popapa
+Горячие клавиши
+- Alt+Shift+M включает и выключает расширение: при включении новые вкладки открываются на переднем плане, при выключении остаются в фоне
+- Alt+Shift+S временно приостанавливает работу без открытия всплывающего окна
 
-Vozmozhnosti
-- srazu fokusiruet kazhduyu novuyu vkladku
-- rabotaet dlya ssylok, zakladok i vkladok ot rasshireniy
-- peremikaetsya s paneli instrumentov ili s klaviatury
-- snooze na ukazannoe chislo minut
-- otdelnie sostoyaniya dlya obychnyh i rezhima inkognito (esli vklyuchen)
-- legkovesnoe reshenie bez nastroek
+Возможности
+- мгновенно переводит фокус на новую вкладку
+- работает для ссылок, закладок и вкладок, открытых расширениями
+- переключение с кнопки на панели инструментов или горячими клавишами
+- пауза на заданное число минут
+- отдельные состояния для обычных и инкогнито‑окон (если режим инкогнито включен)
+- лёгкое решение, не требует настройки
 
-Bezopasnost
-- bez reklam, analitiki i trekinnga
-- bez host-permission i dostupov k seti
-- otkrytyy kod na GitHub po licenzii MIT
+Почему это безопасно
+- без рекламы, аналитики и трекинга
+- без прав на сайты и доступа к сети
+- открытый исходный код на GitHub, лицензия MIT
 
-Open source
-Kod i instrukcii po sborke: https://github.com/pardeike/make-new-tabs-active
+Открытый исходный код
+Код и инструкции по сборке: https://github.com/pardeike/make-new-tabs-active

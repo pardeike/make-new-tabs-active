@@ -12,7 +12,7 @@ Features
 - separate states for normal and incognito windows (if incognito is enabled)
 - lightweight, zero configuration
 
-Why it''s safe
+Why it's safe
 - no ads, analytics, or tracking
 - no host permissions or network access
 - open source on GitHub under the MIT License

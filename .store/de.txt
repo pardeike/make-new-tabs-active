@@ -1,21 +1,21 @@
-Chrome oeffnet neue Tabs standardmaessig im Hintergrund. Make New Tabs Active holt jeden neuen Tab sofort nach vorne, auch wenn er ueber Links, Lesezeichen oder Erweiterungen geoeffnet wurde.
+Chrome öffnet neue Tabs standardmäßig im Hintergrund. Make New Tabs Active wechselt den Fokus sofort auf jeden neuen Tab, auch auf Tabs, die über Links, Lesezeichen oder Erweiterungen geöffnet werden.
 
-Tastenkombinationen
-- Alt+Shift+M schaltet die Erweiterung ein oder aus, sodass neue Tabs sofort vorne erscheinen oder im Hintergrund bleiben
-- Alt+Shift+S snoozet ohne das Popup zu oeffnen
+Tastenkürzel
+- Alt+Shift+M schaltet die Erweiterung um: Eingeschaltet öffnen künftige Tabs im Vordergrund, ausgeschaltet bleiben sie im Hintergrund
+- Alt+Shift+S pausiert („Snooze“) ohne das Popup zu öffnen
 
 Funktionen
-- fokussiert jeden neu geoeffneten Tab sofort
-- funktioniert mit Links, Lesezeichen und von Erweiterungen geoeffneten Tabs
-- umschalten ueber die Symbolleiste oder per Tastenkombination
-- snooze fuer eine festgelegte Anzahl an Minuten
-- getrennte Zustaende fuer normale und Inkognito-Fenster (falls Inkognito aktiviert ist)
-- leichtgewichtig, keine Konfiguration
+- fokussiert jeden neuen Tab sofort
+- funktioniert für Links, Lesezeichen und von Erweiterungen geöffnete Tabs
+- umschalten über die Schaltfläche in der Symbolleiste oder per Tastenkürzel
+- für eine festgelegte Anzahl von Minuten pausieren
+- separate Zustände für normale und Inkognito‑Fenster (wenn Inkognito aktiviert ist)
+- schlank, ohne Konfiguration
 
-Sicherheit
+Warum es sicher ist
 - keine Werbung, keine Analytik, kein Tracking
-- keine Host-Berechtigungen oder Netzwerkzugriffe
-- Open Source auf GitHub unter der MIT-Lizenz
+- keine Hostberechtigungen oder Netzwerkzugriffe
+- Open Source auf GitHub unter der MIT‑Lizenz
 
 Open Source
-Code und Build-Anleitung: https://github.com/pardeike/make-new-tabs-active
+Code und Build‑Anweisungen: https://github.com/pardeike/make-new-tabs-active

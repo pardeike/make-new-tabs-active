@@ -1,21 +1,21 @@
-Chrome abre novas abas em segundo plano por padrao. Make New Tabs Active traz cada nova aba para frente imediatamente, mesmo as abertas por links, favoritos ou extensoes.
+Por padrão, o Chrome abre novas abas em segundo plano. O Make New Tabs Active alterna o foco para cada nova aba imediatamente, inclusive as abertas por links, favoritos ou extensões.
 
 Atalhos de teclado
-- Alt+Shift+M liga ou desliga a extensao para que as novas abas aparecam na frente ou fiquem em segundo plano
-- Alt+Shift+S adia temporariamente sem abrir o popup
+- Alt+Shift+M ativa/desativa a extensão: ligada, as próximas abas abrem em primeiro plano; desligada, ficam em segundo plano
+- Alt+Shift+S pausa temporariamente sem abrir o pop‑up
 
 Recursos
-- foca cada nova aba instantaneamente
-- funciona com links, favoritos e abas abertas por extensoes
-- alterna pela barra de ferramentas ou pelos atalhos de teclado
-- snooze pelo numero de minutos que voce definir
-- estados separados para janelas normais e anonimas (quando anonimo esta habilitado)
-- leve, sem configuracao
+- foca imediatamente cada nova aba
+- funciona com links, favoritos e abas abertas por extensões
+- alternar pelo botão da barra de ferramentas ou pelos atalhos
+- pausa por um número definido de minutos
+- estados separados para janelas normais e anônimas (se o modo anônimo estiver habilitado)
+- leve, sem configuração
 
-Por que e seguro
-- sem anuncios, analises ou rastreamento
-- sem permissoes de host ou acesso a rede
-- codigo aberto no GitHub sob licenca MIT
+Por que é seguro
+- sem anúncios, análises ou rastreamento
+- sem permissões de host nem acesso à rede
+- código aberto no GitHub sob a licença MIT
 
-Codigo aberto
-Codigo e instrucoes de build: https://github.com/pardeike/make-new-tabs-active
+Código aberto
+Código e instruções de build: https://github.com/pardeike/make-new-tabs-active

@@ -1,21 +1,21 @@
-Chrome oppnar nya flikar i bakgrunden som standard. Make New Tabs Active flyttar direkt fram varje ny flik, aven de som oppnas av lankar, bokmarken eller andra tillagg.
+Chrome öppnar nya flikar i bakgrunden som standard. Make New Tabs Active växlar fokus till varje ny flik direkt, även flikar som öppnas via länkar, bokmärken eller tillägg.
 
-Snabbkommandon
-- Alt+Shift+M slar pa eller av tillagget sa nya flikar hamnar framme eller stannar i bakgrunden
-- Alt+Shift+S snoozar utan att oppna popupfonstret
+Tangentbordsgenvägar
+- Alt+Shift+M växlar tillägget: påslaget öppnas kommande flikar i förgrunden, avslaget stannar de i bakgrunden
+- Alt+Shift+S pausar tillfälligt utan att öppna popupen
 
 Funktioner
 - fokuserar varje ny flik omedelbart
-- fungerar for lankar, bokmarken och flikar som oppnas av tillagg
-- byt via verktygsfaltet eller med snabbkommandona
-- snooze i det antal minuter du anger
-- separata lagen for vanliga och inkognitofonster (om inkognito ar aktiverat)
-- lattviktigt, ingen konfigurering behovs
+- fungerar för länkar, bokmärken och flikar som öppnas av tillägg
+- växla via knappen i verktygsfältet eller med genvägar
+- pausa under ett angivet antal minuter
+- separata lägen för vanliga och inkognitofönster (om inkognito är aktiverat)
+- lättvikt, ingen konfiguration
 
-Sakerhet
-- inga annonser, analys eller spaning
-- inga host-behorigheter eller natverkstillgang
-- open source pa GitHub under MIT-licensen
+Varför det är säkert
+- inga annonser, ingen analys eller spårning
+- inga värdtillstånd eller nätverksåtkomst
+- öppen källkod på GitHub under MIT‑licensen
 
-Open source
+Öppen källkod
 Kod och bygginstruktioner: https://github.com/pardeike/make-new-tabs-active

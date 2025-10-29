@@ -1,21 +1,21 @@
-Chrome opens new tabs in the background by default. Make New Tabs Active brings every new tab to the front immediately, including tabs opened by links, bookmarks, or other extensions.
+Chrome は既定で新しいタブをバックグラウンドで開きます。Make New Tabs Active は、リンクやブックマーク、拡張機能で開かれたタブも含め、すべての新しいタブに即座にフォーカスを切り替えます。
 
-Keyboard shortcuts
-- Alt+Shift+M toggles the extension so future tabs open in front when on or stay in the background when off
-- Alt+Shift+S snoozes without opening the popup
+キーボードショートカット
+- Alt+Shift+M で拡張機能を切り替え。オンのときは今後のタブが前面で開き、オフのときはバックグラウンドのまま
+- Alt+Shift+S でポップアップを開かずに一時停止（スヌーズ）
 
-Features
-- focuses each new tab right away
-- works with links, bookmarks, and extension opened tabs
-- toggle from the toolbar button or the keyboard shortcuts
-- snooze for the number of minutes you choose
-- separate states for normal and incognito windows (when incognito is enabled)
-- lightweight, zero configuration
+機能
+- 新しいタブに即座にフォーカス
+- リンク、ブックマーク、拡張機能が開くタブに対応
+- ツールバーのボタンまたはショートカットで切り替え
+- 指定した分数だけスヌーズ
+- 通常ウィンドウとシークレットウィンドウで個別の状態（シークレットが有効な場合）
+- 軽量。設定不要。
 
-Safety
-- no ads, analytics, or tracking
-- no host permissions or network access
-- open source on GitHub under the MIT License
+安全な理由
+- 広告、アナリティクス、トラッキングなし
+- ホスト権限やネットワークアクセスなし
+- MIT ライセンスのオープンソース（GitHub）
 
-Open source
-Code and build instructions: https://github.com/pardeike/make-new-tabs-active
+オープンソース
+コードとビルド手順: https://github.com/pardeike/make-new-tabs-active

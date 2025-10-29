@@ -1,20 +1,20 @@
-Chrome apre le nuove schede in background per impostazione predefinita. Make New Tabs Active porta subito in primo piano ogni scheda nuova, anche quelle aperte da link, preferiti o estensioni.
+Per impostazione predefinita Chrome apre le nuove schede in background. Make New Tabs Active porta subito il focus su ogni nuova scheda, incluse quelle aperte da link, segnalibri o estensioni.
 
 Scorciatoie da tastiera
-- Alt+Shift+M abilita o disabilita l estensione cosi le nuove schede si aprono in primo piano oppure restano in background
-- Alt+Shift+S mette in snooze senza aprire il popup
+- Alt+Shift+M attiva/disattiva l’estensione: se attiva, le prossime schede si aprono in primo piano; se disattiva, restano in background
+- Alt+Shift+S mette in pausa temporaneamente senza aprire il popup
 
-Funzionalita
-- mette a fuoco ogni nuova scheda all istante
-- funziona con link, preferiti e schede aperte dalle estensioni
-- puoi cambiare dalla barra degli strumenti o con le scorciatoie
-- snooze per il numero di minuti che decidi
-- stati separati per finestre normali e in incognito (se abilitato)
-- leggero, nessuna configurazione
+Funzionalità
+- porta immediatamente il focus su ogni nuova scheda
+- funziona con link, segnalibri e schede aperte dalle estensioni
+- attiva/disattiva dal pulsante della barra degli strumenti o tramite scorciatoie
+- pausa per un numero di minuti impostato
+- stati separati per finestre normali e in incognito (se l’incognito è abilitato)
+- leggera, senza configurazione
 
-Perche e sicuro
-- nessuna pubblicita, analisi o tracciamento
-- nessun permesso host o accesso alla rete
+Perché è sicura
+- niente pubblicità, analisi o tracciamento
+- nessuna autorizzazione host o accesso alla rete
 - open source su GitHub con licenza MIT
 
 Open source
