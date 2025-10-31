@@ -2,8 +2,8 @@
   "name": "__MSG_extensionName__",
   "short_name": "__MSG_extensionShortName__",
   "description": "__MSG_extensionDescription__",
-  "version": "1.0.0",
-  "version_name": "1.0.0",
+  "version": "1.0.1",
+  "version_name": "1.0.1",
   "default_locale": "en",
   "manifest_version": 3,
   "icons": {
@@ -14,7 +14,6 @@
   },
   "incognito": "split",
   "permissions": [
-    "tabs",
     "storage",
     "alarms"
   ],
@@ -35,8 +34,8 @@
   "commands": {
     "toggle-enabled": {
       "suggested_key": {
-        "default": "Alt+Shift+T",
-        "mac": "Alt+Shift+T"
+        "default": "Alt+Shift+M",
+        "mac": "Alt+Shift+M"
       },
       "description": "__MSG_toggleCommandDescription__"
     },

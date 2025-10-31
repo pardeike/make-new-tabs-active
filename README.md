@@ -7,11 +7,16 @@
 Bring every new Chrome tab straight into view so you keep your train of thought. Toggle the behavior, snooze it when you need to, and rely on shortcuts to stay in control without hunting for tabs.
 
 ## What it does
-- Promotes brand-new tabs—including ones opened by other extensions—so they become active instantly.
+- Promotes brand-new tabs-including ones opened by other extensions-so they become active instantly.
 - Shows status at a glance in the toolbar popup, with a quick toggle and an optional snooze timer.
 - Lets you pause the behavior for a custom number of minutes; it resumes automatically.
 - Maintains separate states for normal and incognito windows when split-incognito is enabled.
-- Provides keyboard shortcuts: `Alt+Shift+T` toggles the extension, `Alt+Shift+S` snoozes for the saved duration.
+- Includes built-in keyboard shortcuts so you can toggle or snooze without opening the popup.
+
+## Keyboard shortcuts
+- Toggle the extension with `Alt+Shift+M` (macOS: `Option+Shift+M`) to switch between activating every new tab and letting Chrome keep them in the background.
+- Snooze with `Alt+Shift+S` (macOS: `Option+Shift+S`) when you need a temporary break.
+- Want something else? Open `chrome://extensions/shortcuts`, find **Make New Tabs Active**, and assign any combination Chrome allows. Chrome applies the change immediately, so you can pick a shortcut that avoids conflicts with other apps.
 
 ## Get started
 1. Clone or download this repository.
@@ -27,9 +32,9 @@ Bring every new Chrome tab straight into view so you keep your train of thought.
 ## Technical reference
 
 ### Build a signed package (optional)
-- Run the macOS helper script `./make.sh` to create a `.crx` via Chrome's `--pack-extension` flag.
-- Before running, set `CHROME_BINARY` and `CHROME_KEY` in the script so they match your local Chrome installation and private key.
-- The built archive is saved as `make-new-tabs-active-<version>.crx` in the project root.
+- **macOS / Linux:** Run `./make.sh` to create a `.crx` via Chrome's `--pack-extension` flag. Update `CHROME_BINARY` and `CHROME_KEY` in the script first so they point at your local Chrome executable and private key.
+- **Windows:** Run `make.bat`. It defaults to Chrome at `C:\Program Files\Google\Chrome\Application\chrome.exe`, so adjust `CHROME_BINARY` and `CHROME_KEY` in the script if your paths differ.
+- Both scripts write `make-new-tabs-active-<version>.crx` to the project root.
 
 ### Localization
 - User-facing copy comes from Chrome's i18n system in `_locales/`.

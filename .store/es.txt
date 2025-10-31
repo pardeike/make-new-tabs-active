@@ -1,0 +1,21 @@
+Chrome abre las pestañas nuevas en segundo plano de forma predeterminada. Make New Tabs Active cambia el foco a cada pestaña nueva de inmediato, incluidas las abiertas desde enlaces, marcadores o extensiones.
+
+Atajos de teclado
+- Alt+Shift+M activa o desactiva la extensión: si está activada, las próximas pestañas se abren en primer plano; si está desactivada, permanecen en segundo plano
+- Alt+Shift+S pausa temporalmente sin abrir la ventana emergente
+
+Funciones
+- enfoca al instante cada pestaña nueva
+- funciona con enlaces, marcadores y pestañas abiertas por extensiones
+- activar o desactivar desde el botón de la barra de herramientas o con atajos
+- pausa durante un número definido de minutos
+- estados separados para ventanas normales y de incógnito (si incógnito está habilitado)
+- ligera, sin configuración
+
+Por qué es segura
+- sin anuncios, analítica ni seguimiento
+- sin permisos de host ni acceso a la red
+- código abierto en GitHub bajo licencia MIT
+
+Código abierto
+Código e instrucciones de compilación: https://github.com/pardeike/make-new-tabs-active
